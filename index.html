@@ -30,12 +30,23 @@
           <li class="nav-item"><a href="#projects">Projects</a> </li>
           <li class="nav-item"><a href="#contact">Contact</a> </li>
           <li class="nav-item">
-            <button class="active">Resume</button>
+            <button>
+              <a href="#" target="modal-frame" id="open-modal">
+                Resume
+              </a>
+            </button>
           </li>
         </ul>
       </nav>
 
-      <section class="hero">
+      <div class="modal" id="iframe-modal">
+        <div class="modal-content">
+          <button id="close-modal">Close</button>
+          <iframe id="iframe-content" src=""></iframe>
+        </div>
+      </div>
+
+      <section class="hero tracking-in-contract">
         Coming Soon...
       </section>
     </div>
@@ -45,6 +56,22 @@
 
       menuIcon.addEventListener('click', () => {
         navMenu.classList.toggle('active');
+      });
+
+      const openIcon = document.getElementById("open-modal");
+      const closeIcon = document.getElementById("close-modal");
+      const modal = document.getElementById("iframe-modal");
+      const iframe = document.getElementById("iframe-content");
+
+      openIcon.addEventListener('click', (e) => {
+        e.preventDefault();
+        iframe.src = "./VaralakshmiPatnalaSeniorRuby_on_RailsDeveloper.pdf"
+        modal.style.display = "flex";
+      })
+
+      closeIcon.addEventListener('click', () => {
+        iframe.src = "";
+        modal.style.display = "none";
       })
     </script>
   </body>
