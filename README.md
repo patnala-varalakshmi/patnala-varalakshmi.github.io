@@ -17,6 +17,7 @@ Quick learner, adaptable to both team and individual work environments. Passiona
 ### Languages and Tools:
 
 - Ruby on Rails
+- ASP.NET (C#)
 - Python
 - ReactJS
   
